@@ -1,0 +1,7 @@
+{  
+  "/api/*": {  
+     "target": "https://api.globalgiving.org/",  
+     "secure": false,  
+     "logLevel": "debug"  
+  }  
+}  

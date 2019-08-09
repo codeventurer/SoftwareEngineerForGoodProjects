@@ -1,0 +1,3 @@
+h1 {color: rebeccapurple;}
+#projectgrid {display: grid; grid-template-columns: 50% 50%; grid-column-gap: 1em; background-color:lavender;
+}
