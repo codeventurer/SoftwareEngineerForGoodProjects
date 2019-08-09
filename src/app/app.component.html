@@ -1,7 +1,27 @@
-<h1>Projects Display{{title}}
+
+
+
+
+
+
+
+<h1>{{title}}
 </h1>
-<div id="projectgrid" >
-   {{floodsinpakistan}}
-    <div><h1>Projects for Good</h1></div>
+<div id="projectgrid">
+<div> 
+<h3>One Project</h3>
+<button (click)="RetrieveOneProject()">Get One Project</button>
+{{project}}
 </div>
-  <router-outlet></router-outlet>
+<div>
+<h3>Pakistan Projects</h3>
+<button (click)="RetrievePakistanProjects()">Get Pakistan Projects</button>
+{{floodsinpakistan}}
+</div>
+<div>
+<h3>All Projects</h3>
+<button (click)="RetrieveAllProjects()">Get All Projects</button>
+{{projects}}
+</div> 
+</div>
+<router-outlet></router-outlet>

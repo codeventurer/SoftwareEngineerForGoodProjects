@@ -11,7 +11,7 @@ export class DisplayProjectsComponent implements OnInit {
 
   ngOnInit() {
 
-    alert("Hi from the DisplayProjectsComponent");
+    alert('Hi from the DisplayProjectsComponent');
 
   }
 
