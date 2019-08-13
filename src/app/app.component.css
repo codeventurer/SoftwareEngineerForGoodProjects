@@ -1,6 +1,39 @@
+
+body {background-color: tomato;}
+
 h1 {color: grey; text-align:center;}
-#projectgrid {display: grid; grid-template-columns: 30% 30% 30%; grid-column-gap: 3em; background-color:grey;
+#projectgrid {display: grid; grid-template-columns: 45% 45%; grid-template-rows: 4; grid-column-gap: 3em; background-color:grey;
 }
 
-h3 {color: white;}
+tr th h3 {
+    color: blanchedalmond; size: 3em;
+}
 
+input[type=text] {
+    background-color: #3CBC8D;
+    color: white;
+  }
+
+ .button  { background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  }
+
+  p { background-color: black;
+    border: none;
+    color: tomato;
+    }
+
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+
+      .pagination a.active {
+        background-color: #4CAF50;
+        color: white;
+      }
+      
+      .pagination a:hover:not(.active) {background-color: #ddd;}
