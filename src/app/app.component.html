@@ -1,0 +1,81 @@
+<h1>{{title}}</h1>
+<div id="projectgrid">
+<div> 
+<h3>Get Image of Project By ID</h3>
+<input type="text" placeholder="Enter Project Id" [(ngModel)]="projid">
+<button (click)="RetrieveOneProject()">Get Project Image and Title by ID</button>
+<p *ngIf="project">You entered project id: {{project.project.id}}.</p>
+<img *ngIf="project" [src]="project.project.imageLink" width="600px" height="400px">
+<p *ngIf="project">{{project.project.title}}</p>
+</div>
+<div> 
+<h3>Get Featured Projects</h3>
+<button (click)="RetrieveFeaturedProjects()">Get Featured Projects</button>
+<p *ngIf="featuredprojects">{{featuredprojects | json}}</p>
+<img *ngIf="featuredproject" [src]="featuredprojects.projects.project.imageLink" width="600px" height="400px">
+<p *ngIf="project">{{featuredprojects.projects.project[0].mission}}</p>
+</div>
+<div>
+<h3>Get Project By Country</h3>
+<input type="text" placeholder="Enter Country Code" [(ngModel)]="countrycode">
+<button (click)="RetrieveProjectsByCountryCode()">Get Project By Country Code</button>
+<p *ngIf="projectsbycountry">You entered the country code {{countrycode}} which is for the following country:  {{projectsbycountry.projects.project[0].contactCountry | json}}</p>
+<p *ngIf="projectsbycountry">Here are the projects:  {{projectsbycountry | json}}</p>
+</div>
+<div>
+<h3>Get Projects</h3>
+<button (click)="AllProjects()">Get Projects</button>
+<table>
+    <tbody *ngIf="List">
+    <tr>{{List.projects.project[0].organization.name | json}}</tr>
+    <tr>{{List.projects.project[0].url | json}}</tr>
+    <img *ngIf="List" [src]="List.projects.project[0].imageLink" width="600px" height="400px">
+    <tr>{{List.projects.project[0].summary | json}}</tr>
+
+    <tr>{{List.projects.project[1].organization.name | json}}</tr>
+    <tr>{{List.projects.project[1].url | json}}</tr>
+    <img *ngIf="List" [src]="List.projects.project[1].imageLink" width="600px" height="400px">
+    <tr>{{List.projects.project[1].summary | json}}</tr>
+
+    <tr>{{List.projects.project[2].organization.name | json}}</tr>
+    <tr>{{List.projects.project[2].url | json}}</tr>
+    <img *ngIf="List" [src]="List.projects.project[2].imageLink" width="600px" height="400px">
+    <tr>{{List.projects.project[2].summary | json}}</tr>
+   
+    <tr>{{List.projects.project[3].organization.name | json}}</tr>
+    <tr>{{List.projects.project[3].url | json}}</tr>
+    <img *ngIf="List" [src]="List.projects.project[3].imageLink" width="600px" height="400px">
+    <tr>{{List.projects.project[3].summary | json}}</tr>
+
+    <tr>{{List.projects.project[4].organization.name | json}}</tr>
+    <tr>{{List.projects.project[4].url | json}}</tr>
+    <img *ngIf="List" [src]="List.projects.project[4].imageLink" width="600px" height="400px">
+    <tr>{{List.projects.project[4].summary | json}}</tr>
+
+    <tr>{{List.projects.project[5].organization.name | json}}</tr>
+    <tr>{{List.projects.project[5].url | json}}</tr>
+    <img *ngIf="List" [src]="List.projects.project[5].imageLink" width="600px" height="400px">
+    <tr>{{List.projects.project[5].summary | json}}</tr>
+
+    <tr>{{List.projects.project[6].organization.name | json}}</tr>
+    <tr>{{List.projects.project[6].url | json}}</tr>
+    <img *ngIf="List" [src]="List.projects.project[6].imageLink" width="600px" height="400px">
+    <tr>{{List.projects.project[6].summary | json}}</tr>
+
+    <tr>{{List.projects.project[7].id | json}}</tr>
+    <tr>{{List.projects.project[7].url | json}}</tr>
+    <img *ngIf="List" [src]="List.projects.project[7].imageLink" width="600px" height="400px">
+    <tr>{{List.projects.project[7].summary | json}}</tr>
+
+    <tr>{{List.projects.project[8].organization.name | json}}</tr>
+    <tr>{{List.projects.project[8].url | json}}</tr>
+    <img *ngIf="List" [src]="List.projects.project[8].imageLink" width="600px" height="400px">
+    <tr>{{List.projects.project[8].summary | json}}</tr>
+
+    <tr>{{List.projects.project[9].organization.name | json}}</tr>
+    <tr>{{List.projects.project[9].url | json}}</tr>
+    <img *ngIf="List" [src]="List.projects.project[9].imageLink" width="600px" height="400px">
+    <tr>{{List.projects.project[9].summary | json}}</tr>    </tbody>
+</table>
+</div>
+<router-outlet></router-outlet>
