@@ -1,6 +1,7 @@
 # SoftwareEngineerForGoodProjects
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+It uses two way binding on some fields.  It connects to the global giving api and consumes and parses the data.  If I had more time, I would have added additional error handling and validation.  I would have added autocommplete on fields like iso country code.  I would have styled the application more and added additional videos, images, project data, searches and pagination.
 
 ## Development server
 
