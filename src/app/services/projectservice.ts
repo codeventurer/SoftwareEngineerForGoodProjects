@@ -17,22 +17,22 @@ constructor(private httpclient: HttpClient) {}
 getOneProject(num: number): Observable <any> {
     this.initialProjId = num;
     const headers = new HttpHeaders({ 'Access-Control-Allow-Origin': '*'});
-    return this.httpclient.get(`https://api.globalgiving.org/api/public/projectservice/projects/${this.initialProjId}?api_key=bd6936bb-c219-4951-89df-f499ab889c9d`, {responseType: 'text', headers});
+    return this.httpclient.get(`https://api.globalgiving.org/api/public/projectservice/projects/${this.initialProjId}?api_key=API-KEY`, {responseType: 'text', headers});
 }
 
 getFeaturedProjects(): Observable <any> {
     const headers = new HttpHeaders({ 'Access-Control-Allow-Origin': '*'});
-    return this.httpclient.get("https://api/public/projectservice/featured/projects?api_key=bd6936bb-c219-4951-89df-f499ab889c9d", {responseType: 'text', headers});
+    return this.httpclient.get("https://api/public/projectservice/featured/projects?api_key=API-KEy", {responseType: 'text', headers});
 }
 
 getAllProjects(): Observable <any> {
     const headers = new HttpHeaders({ 'Access-Control-Allow-Origin': '*'});
-    return this.httpclient.get('https://api.globalgiving.org/api/public/projectservice/all/projects?api_key=bd6936bb-c219-4951-89df-f499ab889c9d', {responseType: 'text', headers});
+    return this.httpclient.get('https://api.globalgiving.org/api/public/projectservice/all/projects?api_key=API-KEY', {responseType: 'text', headers});
 }
 
 getProjectsSummary(): Observable <any> {
     const headers = new HttpHeaders({ 'Access-Control-Allow-Origin': '*'});
-    return this.httpclient.get('https://api/public/projectservice/all/projects/active/summary?api_key=bd6936bb-c219-4951-89df-f499ab889c9d', {responseType: 'text', headers});
+    return this.httpclient.get('https://api/public/projectservice/all/projects/active/summary?api_key=API-KEY', {responseType: 'text', headers});
 }
 
 getByCountry(code: string): Observable <any> {
